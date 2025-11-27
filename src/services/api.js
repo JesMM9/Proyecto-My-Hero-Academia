@@ -1,18 +1,15 @@
 const heroesURL = "http://localhost:3000/uaHeroes";
 
-export function getAllHeroes() {
-    let respuesta = [];
-
-    fetch(heroesURL, {
-        method: "GET"
-    })
-    .then(response => response.ok? response.json(): Promise.reject(response))
-    .then(heroes => {
-        respuesta = heroes;
-    })
-    .catch(error => console.error(error));
-
-    return respuesta;
+export async function getAllHeroes() {
+    try {
+        const response = await fetch(heroesURL, { method: "GET" });
+        if (!response.ok) throw new Error("Error en la petición");
+        const heroes = await response.json();
+        return heroes;
+    } catch (error) {
+        console.error(error);
+        return [];
+    }
 }
 
 export function getHeroe(id) {
