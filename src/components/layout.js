@@ -1,12 +1,13 @@
-
-
 export function renderHeader(header) {
   header.innerHTML = `
     <nav>
-      <a href="#">Listado de héroes</a>
-      <a href="#">Favoritos</a>
-      <a href="#">Añadir nuevo héroe</a>
-      <a href="#">Sobre nosotros</a>
+      <ul>
+        <li><img src=\"src/assets/My_Hero_Academia_Logo.png\"></li>
+        <li><a href="/index.html">Listado de héroes</a></li>
+        <li><a href="#">Añadir nuevo héroe</a></li>
+        <li><a href="#">Favoritos</a></li>
+        <li><a href="#">Sobre nosotros</a></li>
+      </ul>
     </nav>
   `;
 }
