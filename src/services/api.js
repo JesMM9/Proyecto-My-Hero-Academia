@@ -12,36 +12,36 @@ export async function getAllHeroes() {
     }
 }
 
-export function getHeroe(id) {
-    let respuesta = {};
+export async function getHeroe(id) {
 
-    fetch(heroesURL + "/" + id, {
-        method: "GET"
-    })
-    .then(response => response.ok? response.json(): Promise.reject(response))
-    .then(heroe => {
-        respuesta = heroe;
-    })
-    .catch(error => console.error(error));
+    try {
+        const response = await fetch(heroesURL + "/" + id, { method: "GET" });
+        if (!response.ok) throw new Error("Error en la petición");
+        const heroe = await response.json();
+        return heroe;
+    } catch (error) {
+        console.error(error);
+        return null;
+    }
 
-    return respuesta;
 }
 
-export function addHeroe(heroe) {
-    let respuesta = 0;
-
-    fetch(heroesURL, {
-        method: "POST",
-        body: JSON.stringify(heroe),
-        headers: {
-            "Content-Type": "application/json"
-        }
-    })
-    .then(response => response.ok? response.json(): Promise.reject(response))
-    .then(heroeAdded => {
-        respuesta = heroeAdded;
-    })
-    .catch(error => console.error(error));
-
-    return respuesta;
+export async function addHeroe(heroe) {
+    
+    try {
+        const response = await fetch(heroesURL, {
+                    method: "POST",
+                    body: JSON.stringify(heroe),
+                    headers: {
+                        "Content-Type": "application/json"
+                    }
+                });
+        if (!response.ok) throw new Error("Error en la petición");
+        const addedHeroe = await response.json();
+        return addedHeroe;
+    } catch (error) {
+        console.error(error);
+        return null;
+    }
+    
 }

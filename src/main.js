@@ -17,6 +17,7 @@ async function init() {
           <th>Imágen</th>
           <th>Nombre</th>
           <th>Nombre de Héroe</th>
+          <th>Detalles</th>
         </tr>
       </thead>
       <tbody>
@@ -25,6 +26,7 @@ async function init() {
             <td><img src=\"${heroe.imagen}\"></td>
             <td>${heroe.nombre}</td>
             <td>${heroe.nombre_heroe}</td>
+            <td><a href=\"heroeDetails.html?${heroe.id}\"><button>Detalles</button></a></td>
           </tr>
         `).join('')}
       </tbody>
