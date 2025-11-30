@@ -2,7 +2,7 @@ export function renderHeader(header) {
   header.innerHTML = `
     <nav>
       <ul>
-        <li><img src=\"../assets/My_Hero_Academia_Logo.png\"></li>
+        <li><img src=\"./src/assets/My_Hero_Academia_Logo.png\"></li>
         <li><a href="#/">Listado de héroes</a></li>
         <li><a href="#/newHeroe">Añadir nuevo héroe</a></li>
         <li><a href="#/favourites">Favoritos</a></li>
