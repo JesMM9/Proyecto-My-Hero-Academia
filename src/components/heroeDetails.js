@@ -1,4 +1,3 @@
-import '../style.css'
 import { getHeroe } from "../services/api.js";
 
 export async function HeroeDetails(id) {
