@@ -18,14 +18,21 @@ export async function router() {
     };
 
     if (parts[1] === "heroedetails") {
-        const id = parts[2];
-        view.innerHTML = await HeroeDetails(id);
+        const result = await HeroeDetails(parts[2]);
+        view.innerHTML = "";
+        view.appendChild(result);
         return;
     }
 
     if (parts[1] === "newheroe") {
         view.innerHTML = "";
         view.appendChild(await NewHeroe());
+        return;
+    }
+
+    if (parts[1] === "favourites") {
+        view.innerHTML = "";
+        view.appendChild(await favourites());
         return;
     }
 
