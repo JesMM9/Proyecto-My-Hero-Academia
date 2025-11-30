@@ -50,7 +50,7 @@ export async function NewHeroe() {
 
     form.addEventListener('submit', async function(event) {
         event.preventDefault();
-        const urlImg = imagen.value  || '/src/assets/My_Hero_Academia_Logo.png';
+        const urlImg = imagen.value  || '../assets/My_Hero_Academia_Logo.png';
         const nameValue = name.value;
         const heroeNameValue = heroeName.value;
         const dones = [...divInputsDones.querySelectorAll('input[name="dones[]"]')].map(don => don.value);
