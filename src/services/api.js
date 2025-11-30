@@ -1,4 +1,4 @@
-const heroesURL = "http://localhost:3000/uaHeroes";
+const heroesURL = "https://692c792dc829d464006faa0e.mockapi.io/heroes/heroes";
 
 export async function getAllHeroes() {
     try {
