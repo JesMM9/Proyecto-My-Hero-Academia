@@ -1,9 +1,9 @@
-import { Home } from "/src/components/home";
-import { About } from "/src/components/about";
-import { NewHeroe } from "/src/components/newHeroe";
-import { favourites } from "/src/components/favourites";
-import { HeroeDetails } from "/src/components/heroeDetails";
-import { NotFound } from "/src/components/NotFound";
+import { Home } from "./src/components/home.js";
+import { About } from "./src/components/about";
+import { NewHeroe } from "./src/components/newHeroe";
+import { favourites } from "./src/components/favourites";
+import { HeroeDetails } from "./src/components/heroeDetails";
+import { NotFound } from "./src/components/NotFound";
 
 export async function router() {
     const view = document.getElementById("view");
