@@ -1,18 +1,9 @@
 import '../style.css'
 import { getHeroe } from "../services/api.js";
-import { renderHeader, renderFooter } from './layout.js';
 
-const detalleContent = document.getElementById("detalle");
-const header = document.getElementById("header");
-const footer = document.getElementById("footer");
+export async function HeroeDetails(id) {
 
-const heroeId = window.location.href.split("?")[1];
-
-async function init() {
-
-    renderHeader(header);
-
-    const heroe = await getHeroe(heroeId);
+    const heroe = await getHeroe(id);
 
     let dones = "";
 
@@ -20,7 +11,7 @@ async function init() {
         dones += don + ", ";
     });
 
-    detalleContent.innerHTML = `
+    return `
         <table>
             <thead>
                 <tr>
@@ -45,8 +36,4 @@ async function init() {
         </table>
     `;
 
-    renderFooter(footer);
-
 }
-
-init();
