@@ -1,5 +1,5 @@
-import { renderHeader, renderFooter } from "./src/components/layout.js";
-import { router } from "/src/router.js";
+import { renderHeader, renderFooter } from "./components/layout.js";
+import { router } from "./router.js";
 
 const header = document.getElementById("header");
 const footer = document.getElementById("footer");
