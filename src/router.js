@@ -32,7 +32,7 @@ export async function router() {
 
     if (parts[1] === "favourites") {
         view.innerHTML = "";
-        view.appendChild(await favourites());
+        view.appendChild(favourites());
         return;
     }
 
