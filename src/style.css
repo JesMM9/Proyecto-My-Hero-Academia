@@ -63,7 +63,7 @@ button {
   transition: border-color 0.25s;
 }
 button:hover {
-  border-color: #646cff;
+  border-color: #e60016;
 }
 button:focus,
 button:focus-visible {
@@ -78,6 +78,17 @@ button:focus-visible {
   a:hover {
     color: #747bff;
   }
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+#view{
+  flex: 1;
 }
 
 #header{
@@ -146,4 +157,31 @@ table img{
     height: auto;
     display: block;
     border-radius: 6px;
+}
+
+.form-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+label {
+  color: #242424;
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="url"],
+form textarea {
+  width: 100%;
+  max-width: 400px;
+  box-sizing: border-box;
 }
