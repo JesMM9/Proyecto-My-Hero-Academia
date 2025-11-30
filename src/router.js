@@ -1,9 +1,9 @@
 import { Home } from "./components/home.js";
-import { About } from "./components/about";
-import { NewHeroe } from "./components/newHeroe";
-import { favourites } from "./components/favourites";
-import { HeroeDetails } from "./components/heroeDetails";
-import { NotFound } from "./components/NotFound";
+import { About } from "./components/about.js";
+import { NewHeroe } from "./components/newHeroe.js";
+import { favourites } from "./components/favourites.js";
+import { HeroeDetails } from "./components/heroeDetails.js";
+import { NotFound } from "./components/NotFound.js";
 
 export async function router() {
     const view = document.getElementById("view");
